@@ -29,7 +29,7 @@ int main(int argc,char** argv)
         int recvnum;
         char send_buf[2048];
         char recv_buf[2048];
-
+	//初始化，分配空间
         memset(send_buf,0,2048);
         memset(recv_buf,0,2048);
     //     if ((2>argc)|| (argc >3))
@@ -68,7 +68,7 @@ int main(int argc,char** argv)
     #ifdef DEBUG
 		printf("%s\n",send_buf);
   	#endif 
-
+// sendto (SOCKET s,void *buf,int len,unsigned int flags, struct sockaddr *from,int fromlen)
 	if (0>(send_len=sendto(sockfd,send_buf,strlen(send_buf),0,(struct sockaddr *)&server, addr_len)))
 	{
 		perror("send data error\n");
@@ -76,7 +76,7 @@ int main(int argc,char** argv)
 		exit(1);
 
 	}
-     
+//      recvfrom (SOCKET s,void *buf,int len,unsigned int flags, struct sockaddr *from,int *fromlen)
 	if (0>(recv_len=recvfrom(sockfd,recv_buf,2048,0,(struct sockaddr *)&server, &addr_len)))
 	{
 		perror("recv data error\n");
