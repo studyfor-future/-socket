@@ -15,4 +15,4 @@ socket知识点：https://blog.csdn.net/PinkBean/article/details/71108622
 TCP/UCP的通信代码区别 流程区别 https://blog.csdn.net/e21105834/article/details/91494918
 
 关于如何判断大段，小端的方法：https://blog.csdn.net/sustzc/article/details/80151244 
-思路：对于整形数字1 四个字节char，是被存储在高地址-大端，还是低地址-小端
+思路：对于整形数字1 四个字节char，是被存储在高地址-大端，还是低地址-小端，当前系统为大端存储模式时，其低地址处存储 00，而当前系统为小端存储模式时，其低地址处存储 01。
