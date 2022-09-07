@@ -11,3 +11,5 @@ Linux C语言：准备32位运行环境 参考：https://blog.csdn.net/qq_417253
 
 
 socket知识点：https://blog.csdn.net/PinkBean/article/details/71108622
+
+TCP/UCP的通信代码区别 流程区别 https://blog.csdn.net/e21105834/article/details/91494918
